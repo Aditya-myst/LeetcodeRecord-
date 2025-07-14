@@ -1,7 +1,5 @@
-<p class="has-line-data" data-line-start="0" data-line-end="1">Great initiative! You’re creating a concise <strong>LeetCode Prep Notes / Key Learnings</strong> list — super helpful for revision &amp; your GitHub README.</p>
-<p class="has-line-data" data-line-start="2" data-line-end="3">Here’s a <strong>clean and corrected version</strong> of your notes with formatting, proper explanations, and slight clarifications for clarity and professionalism (perfect for your <code>README.md</code>):</p>
-<hr>
-<h2 class="code-line" data-line-start=6 data-line-end=7 ><a id="_LeetCode_Important__Tricky_Questions_Record_6"></a>🔥 LeetCode Important / Tricky Questions Record</h2>
+
+<h1 class="code-line" data-line-start=6 data-line-end=7 ><a id="_LeetCode_Important__Tricky_Questions_Record_6"></a>🔥 LeetCode Important / Tricky Questions Record</h1>
 <h3 class="code-line" data-line-start=8 data-line-end=9 ><a id="_1_Add_Binary__Leetcode_67httpsleetcodecomproblemsaddbinary_8"></a>✅ 1. Add Binary — <a href="https://leetcode.com/problems/add-binary/">Leetcode 67</a></h3>
 <p class="has-line-data" data-line-start="10" data-line-end="11"><strong>Key Learnings:</strong></p>
 <ul>
