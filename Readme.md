@@ -1,83 +1,84 @@
 
-<h1 class="code-line" data-line-start=6 data-line-end=7 ><a id="_LeetCode_Important__Tricky_Questions_Record_6"></a>🔥 LeetCode Important / Tricky Questions Record</h1>
-<h3 class="code-line" data-line-start=8 data-line-end=9 ><a id="_1_Add_Binary__Leetcode_67httpsleetcodecomproblemsaddbinary_8"></a>✅ 1. Add Binary — <a href="https://leetcode.com/problems/add-binary/">Leetcode 67</a></h3>
-<p class="has-line-data" data-line-start="10" data-line-end="11"><strong>Key Learnings:</strong></p>
-<ul>
-<li class="has-line-data" data-line-start="12" data-line-end="13">
-<p class="has-line-data" data-line-start="12" data-line-end="13">Use <code>size() - 1</code> to get the <strong>last index</strong> of a string.</p>
-</li>
-<li class="has-line-data" data-line-start="13" data-line-end="18">
-<p class="has-line-data" data-line-start="13" data-line-end="14">Build result by <strong>appending to the front</strong> (since binary addition starts from LSB):</p>
-<pre><code class="has-line-data" data-line-start="16" data-line-end="18" class="language-cpp">result = to_string(sum % <span class="hljs-number">2</span>) + result;
-</code></pre>
-</li>
-<li class="has-line-data" data-line-start="18" data-line-end="23">
-<p class="has-line-data" data-line-start="18" data-line-end="19">Remember carry:</p>
-<pre><code class="has-line-data" data-line-start="21" data-line-end="23" class="language-cpp">carry = sum / <span class="hljs-number">2</span>;
-</code></pre>
-</li>
-<li class="has-line-data" data-line-start="23" data-line-end="29">
-<p class="has-line-data" data-line-start="23" data-line-end="24">Loop from back to front using:</p>
-<pre><code class="has-line-data" data-line-start="26" data-line-end="28" class="language-cpp"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = a.size() - <span class="hljs-number">1</span>, j = b.size() - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span> || j &gt;= <span class="hljs-number">0</span>; i--, j--)
-</code></pre>
-</li>
-</ul>
-<hr>
-<h3 class="code-line" data-line-start=31 data-line-end=32 ><a id="_2_01_Matrix__Leetcode_542httpsleetcodecomproblems01matrix_31"></a>✅ 2. 01 Matrix — <a href="https://leetcode.com/problems/01-matrix/">Leetcode 542</a></h3>
-<p class="has-line-data" data-line-start="33" data-line-end="34"><strong>Key Learnings:</strong></p>
-<ul>
-<li class="has-line-data" data-line-start="35" data-line-end="41">
-<p class="has-line-data" data-line-start="35" data-line-end="36">To declare and initialize a 2D vector (<code>n x m</code>) with a value:</p>
-<pre><code class="has-line-data" data-line-start="38" data-line-end="40" class="language-cpp"><span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; dist(n, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;(m, initial_value));
-</code></pre>
-</li>
-<li class="has-line-data" data-line-start="41" data-line-end="53">
-<p class="has-line-data" data-line-start="41" data-line-end="42"><strong>Two-Pass DP Approach:</strong></p>
-<p class="has-line-data" data-line-start="43" data-line-end="44">📌 <strong>Top-Left to Bottom-Right Pass:</strong></p>
-<ul>
-<li class="has-line-data" data-line-start="45" data-line-end="46">Check top neighbor → <code>dist[i-1][j]</code> if <code>i &gt; 0</code></li>
-<li class="has-line-data" data-line-start="46" data-line-end="48">Check left neighbor → <code>dist[i][j-1]</code> if <code>j &gt; 0</code></li>
-</ul>
-<p class="has-line-data" data-line-start="48" data-line-end="49">📌 <strong>Bottom-Right to Top-Left Pass:</strong></p>
-<ul>
-<li class="has-line-data" data-line-start="50" data-line-end="51">Check bottom neighbor → <code>dist[i+1][j]</code> if <code>i &lt; n - 1</code></li>
-<li class="has-line-data" data-line-start="51" data-line-end="53">Check right neighbor → <code>dist[i][j+1]</code> if <code>j &lt; m - 1</code></li>
-</ul>
-</li>
-<li class="has-line-data" data-line-start="53" data-line-end="55">
-<p class="has-line-data" data-line-start="53" data-line-end="54">Set <code>0</code> cells’ distance as 0, and initialize all <code>1</code>s with a large value (e.g., <code>INT_MAX / 2</code> to avoid overflow).</p>
-</li>
-</ul>
-<hr>
-<h2 class="code-line" data-line-start=57 data-line-end=58 ><a id="_Suggestions_for_GitHub_README_Formatting_Markdown_57"></a>🛠 Suggestions for GitHub README Formatting (Markdown):</h2>
-<pre><code class="has-line-data" data-line-start="60" data-line-end="74" class="language-markdown"><span class="hljs-header">## 🔥 LeetCode Important / Tricky Questions Record</span>
+````markdown
+# 🚀 LeetCode Preparation Notes
 
-<span class="hljs-header">### ✅ 1. Add Binary — [Leetcode 67](https://leetcode.com/problems/add-binary/)</span>
-<span class="hljs-strong">**Key Learnings:**</span>
-<span class="hljs-bullet">- </span>Use <span class="hljs-code">`size() - 1`</span> to get last index.
-<span class="hljs-bullet">- </span>Build result string from back using front appending.
-<span class="hljs-bullet">- </span>Manage carry while adding binary digits.
+A curated list of important and tricky **LeetCode problems** I’ve solved, with concise notes and key learnings.  
+This helps me track my progress, revise concepts faster, and prepare for coding interviews efficiently.
 
-<span class="hljs-header">### ✅ 2. 01 Matrix — [Leetcode 542](https://leetcode.com/problems/01-matrix/)</span>
-<span class="hljs-strong">**Key Learnings:**</span>
-<span class="hljs-bullet">- </span>Use:
-  <span class="hljs-code">```</span>cpp
-  vector<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">vector</span>&lt;<span class="hljs-attribute">int</span>&gt;</span></span>&gt; dist(n, vector<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">int</span>&gt;</span></span>(m, initial_value));
-</code></pre>
-<ul>
-<li class="has-line-data" data-line-start="75" data-line-end="79">
-<p class="has-line-data" data-line-start="75" data-line-end="76">Two-pass DP:</p>
-<ul>
-<li class="has-line-data" data-line-start="77" data-line-end="78"><strong>Top-down</strong>: check <code>top</code> and <code>left</code></li>
-<li class="has-line-data" data-line-start="78" data-line-end="79"><strong>Bottom-up</strong>: check <code>bottom</code> and <code>right</code></li>
-</ul>
-</li>
-<li class="has-line-data" data-line-start="79" data-line-end="81">
-<p class="has-line-data" data-line-start="79" data-line-end="80">Initialize all distances as a large value (<code>1e5</code> or <code>INT_MAX / 2</code>).</p>
-</li>
-</ul>
-<pre><code class="has-line-data" data-line-start="82" data-line-end="87">
 ---
 
-✅ Let me know if you’d like me to help you create a full **LeetCode README template**, or want to continue adding more questions in this format. I’d be glad to assist!
-</code></pre>
+## 📚 Table of Contents
+
+- [✅ Add Binary - LeetCode 67](#-1-add-binary---leetcode-67)
+- [✅ 01 Matrix - LeetCode 542](#-2-01-matrix---leetcode-542)
+- [🛠️ More Coming Soon...](#️-more-coming-soon)
+
+---
+
+## ✅ 1. Add Binary – [LeetCode 67](https://leetcode.com/problems/add-binary/)
+
+**Problem:** Add two binary strings and return their sum (also as a binary string).
+
+**Key Learnings:**
+- Use `size() - 1` to get the last index.
+- Add digits from the end, and keep track of carry.
+- Build result from the **front** (prepend):
+  ```cpp
+  result = to_string(sum % 2) + result;
+````
+
+* Use a loop like:
+
+  ```cpp
+  for (int i = a.size() - 1, j = b.size() - 1; i >= 0 || j >= 0 || carry; i--, j--) {
+      int sum = carry;
+      if (i >= 0) sum += a[i] - '0';
+      if (j >= 0) sum += b[j] - '0';
+      result = to_string(sum % 2) + result;
+      carry = sum / 2;
+  }
+  ```
+
+---
+
+## ✅ 2. 01 Matrix – [LeetCode 542](https://leetcode.com/problems/01-matrix/)
+
+**Problem:** Given a matrix of 0s and 1s, return a matrix where each 1 contains the distance to its nearest 0.
+
+**Key Learnings:**
+
+* To initialize a 2D vector of size `n x m` with a default value:
+
+  ```cpp
+  vector<vector<int>> dist(n, vector<int>(m, 1e5)); // large value
+  ```
+
+* Use a **two-pass DP** approach:
+
+  * **Top-Left to Bottom-Right**:
+
+    ```cpp
+    if (i > 0)    dist[i][j] = min(dist[i][j], dist[i - 1][j] + 1);
+    if (j > 0)    dist[i][j] = min(dist[i][j], dist[i][j - 1] + 1);
+    ```
+  * **Bottom-Right to Top-Left**:
+
+    ```cpp
+    if (i < n - 1)  dist[i][j] = min(dist[i][j], dist[i + 1][j] + 1);
+    if (j < m - 1)  dist[i][j] = min(dist[i][j], dist[i][j + 1] + 1);
+    ```
+
+* Initialize 0s with distance 0, and 1s with a large value like `1e5`.
+
+---
+
+## 🛠️ More Coming Soon...
+
+I'm actively solving more problems and will update this repo regularly.
+Stay tuned---
+
+## 🙌 Contributions
+
+This repo is for personal preparation, but if you're a fellow learner and want to collaborate or suggest problems, feel free to open an issue or PR!
+
+---
