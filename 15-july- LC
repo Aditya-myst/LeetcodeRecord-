@@ -1,0 +1,39 @@
+# 🔍 Binary Search – Master the Half!
+
+Binary Search is one of the most powerful tools in algorithmic problem-solving — it's all about narrowing down your search space by half at every step. When used cleverly, it can do much more than just tell you if an element exists.
+
+---
+
+## 🧠 Core Concepts
+
+- Start with `start = 0`, `end = n - 1`
+- Compute mid safely using:  
+  `mid = start + (end - start) / 2`  
+  (prevents integer overflow)
+
+- The position where the target should be is eventually held by `start`.
+
+---
+
+## 🎯 Finding First and Last Occurrence
+
+When searching for the **first or last position** of a target value:
+
+- If `mid` matches the `target`, don't stop!
+- Save the index and:
+  - For **first occurrence**, keep searching left half
+  - For **last occurrence**, keep searching right half
+
+This ensures you find the **exact boundaries** — not just the first match.
+
+---
+
+## ⏱️ Why It Matters
+
+- Efficient: Only takes `O(log n)` time.
+- Critical in sorted arrays with duplicates.
+- Common in competitive programming and interviews.
+
+---
+
+> Use binary search not just to find — but to **pinpoint**.
